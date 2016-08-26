@@ -1,0 +1,263 @@
+/* Dummy app styles */
+body {
+  font-family: Arial;
+}
+.dummy_container h1 {
+  flex: 0 0 auto;
+  font-weight: 200;
+  font-size: 60px;
+  text-align: center;
+  margin: 2em 2em 1em;
+}
+.dummy_container h2 {
+  font-weight: 200;
+  margin: .2em 0;
+}
+.dummy_container {
+  display: flex;
+  flex-direction: column;
+}
+.example_container {
+  flex: 1 1 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.target {
+  width: 100px;
+  height: 100px;
+  margin: 100px;
+  color: blueviolet;
+  border: 1px solid currentColor;
+  background: transparent;
+  border-radius: 50px;
+  outline: 0 none;
+  cursor: pointer;
+  box-shadow: 0 0 5px;
+}
+.target1 {
+  color: blueviolet;
+}
+.target2 {
+  color: green;
+}
+.target3 {
+  color: #0085ff;
+}
+.target4 {
+  color: #333;
+}
+.target:hover {
+  border-width: 2px;
+}
+
+/* Box bubble */
+.box-bubble .a-bubble_content {
+  background: #515151;
+  color: white;
+  padding: 1em;
+  box-shadow: 5px 5px 1px 0px rgba(0, 0, 0, 0.15);
+}
+.box-bubble.a-bubble--top {
+  transform: translateY(-10px);
+}
+.box-bubble.a-bubble--bottom {
+  transform: translateY(10px);
+}
+.box-bubble.a-bubble--left {
+  transform: translateX(-10px);
+}
+.box-bubble.a-bubble--right {
+  transform: translateX(10px);
+}
+.box-bubble .a-bubble_anchor {
+  width: 0;
+	height: 0;
+  z-index: 1;
+}
+.box-bubble.a-bubble--top .a-bubble_anchor {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #515151;
+  bottom: 0;
+  transform: translate(-50%, 0);
+}
+.box-bubble.a-bubble--bottom .a-bubble_anchor {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid #515151;
+  top: 0;
+  transform: translate(-50%, -10px);
+}
+.box-bubble.a-bubble--left .a-bubble_anchor {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid #515151;
+  right: 0;
+  transform: translate(0, -50%);
+}
+.box-bubble.a-bubble--right .a-bubble_anchor {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 10px solid #515151;
+  left: 0;
+  transform: translate(-10px, -50%);
+}
+
+/* Speech bubble */
+.speech-bubble .a-bubble_content {
+  background: white;
+  color: #333;
+  padding: 2.5em 1.5em;
+  border: 2px solid #555;
+  border-radius: 50%;
+}
+.speech-bubble.a-bubble--top {
+  transform: translateY(-20px);
+}
+.speech-bubble.a-bubble--bottom {
+  transform: translateY(20px);
+}
+.speech-bubble.a-bubble--left {
+  transform: translateX(-20px);
+}
+.speech-bubble.a-bubble--right {
+  transform: translateX(20px);
+}
+.speech-bubble .a-bubble_anchor {
+  width: 0;
+	height: 0;
+  z-index: 1;
+}
+.speech-bubble.a-bubble--top .a-bubble_anchor {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 22px solid #515151;
+  bottom: 0;
+  transform: translate(-50%, -2px);
+}
+.speech-bubble.a-bubble--bottom .a-bubble_anchor {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 22px solid #515151;
+  top: 0;
+  transform: translate(-50%, -20px);
+}
+.speech-bubble.a-bubble--left .a-bubble_anchor {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 22px solid #515151;
+  right: 0;
+  transform: translate(-2px, -50%);
+}
+.speech-bubble.a-bubble--right .a-bubble_anchor {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 22px solid #515151;
+  left: 0;
+  transform: translate(-20px, -50%);
+}
+.speech-bubble .a-bubble_anchor::after {
+  position: absolute;
+  content: '.';
+  font-size: 0;
+  width: 0;
+	height: 0;
+  z-index: 1;
+}
+.speech-bubble.a-bubble--top .a-bubble_anchor::after {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 22px solid white;
+  bottom: 0;
+  transform: translate(-50%, -5px);
+}
+.speech-bubble.a-bubble--bottom .a-bubble_anchor::after {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 22px solid white;
+  top: 0;
+  transform: translate(-50%, 5px);
+}
+.speech-bubble.a-bubble--left .a-bubble_anchor::after {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 22px solid white;
+  right: 0;
+  transform: translate(-5px, -50%);
+}
+.speech-bubble.a-bubble--right .a-bubble_anchor::after {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-right: 22px solid white;
+  left: 0;
+  transform: translate(5px, -50%);
+}
+
+/* Thought bubble*/
+.thought-bubble .a-bubble_content {
+  color: #333;
+  padding: 2.5em 1.5em;
+  opacity: 0;
+  animation: fade_in 1500ms 300ms;
+  animation-fill-mode: forwards;
+}
+.thought-bubble.a-bubble--top {
+  transform: translateY(-30px);
+}
+.thought-bubble.a-bubble--bottom {
+  transform: translateY(30px);
+}
+.thought-bubble.a-bubble--left {
+  transform: translateX(-30px);
+}
+.thought-bubble.a-bubble--right {
+  transform: translateX(30px);
+}
+.thought-bubble .a-bubble_content::before {
+  content: '.';
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow:
+    45px 55px 0 50px white,
+    100px 52px 0 60px white,
+    140px 55px 0 40px white,
+    45px 55px 0 52px #555,
+    100px 52px 0 62px #555,
+    140px 55px 0 42px #555;
+}
+.thought-bubble .a-bubble_anchor {
+  width: 2px;
+	height: 2px;
+  z-index: 1;
+  background: white;
+  border: 2px solid #555;
+  border-radius: 50%;
+  box-shadow:
+    0 -15px 0 5px white,
+    0 -15px 0 7px #555;
+  animation: fade_in 1000ms;
+}
+.thought-bubble.a-bubble--top .a-bubble_anchor {
+  transform: translate(-50%, 24px);
+}
+.thought-bubble.a-bubble--bottom .a-bubble_anchor {
+  transform: translate(-50%, -16px);
+}
+.thought-bubble.a-bubble--left .a-bubble_anchor {
+  transform: translate(8px, -50%);
+}
+.thought-bubble.a-bubble--right .a-bubble_anchor {
+  transform: translate(-16px, -50%);
+}
+
+@keyframes fade_in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

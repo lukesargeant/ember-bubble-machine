@@ -1,6 +1,9 @@
 # Ember-bubble-machine
 
-This README outlines the details of collaborating on this Ember addon.
+An Ember Addon that provides *a-bubble* component. Given a target, the component
+will attempt to position itself in an optional preferred direction or in any
+direction it will fit the viewport. CSS hooks are provided and the dummy app
+demonstrates various ways the bubble could be styled.
 
 ## Installation
 

@@ -1,0 +1,25 @@
+<div class="dummy_container">
+  <h1>Click the examples to blow some bubbles.</h1>
+  <div class="example_container">
+    <button class="target target1" {{action "showContent1"}}>No bubble</button>
+    {{#a-bubble class="no-bubble" target=bubbleTarget1 directionPreference=directionPreference}}
+      <h2>No time for CSS?</h2>
+      This is what it you'll see.
+    {{/a-bubble}}
+    <button class="target target2" {{action "showContent2"}}>Box bubble</button>
+    {{#a-bubble class="box-bubble" target=bubbleTarget2 directionPreference=directionPreference}}
+      <h2>Box bubble</h2>
+      For seriously serious content.
+    {{/a-bubble}}
+    <button class="target target3" {{action "showContent3"}}>Thought bubble</button>
+    {{#a-bubble class="thought-bubble" target=bubbleTarget3 directionPreference=directionPreference}}
+      <em>I wonder what this<br />
+      could be used for?</em>
+    {{/a-bubble}}
+    <button class="target target4" {{action "showContent4"}}>Speech bubble</button>
+    {{#a-bubble class="speech-bubble" target=bubbleTarget4 directionPreference=directionPreference}}
+      This is a speech bubble,<br />
+      he said.
+    {{/a-bubble}}
+  </div>
+</div>
